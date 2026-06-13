@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johnson Youth Organization Inc | Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-inner">
+      <div class="top-item">
+        <span class="material-symbols-outlined">mail</span>
+        contact@johnsonyouth.org
+      </div>
+      <div class="top-item">
+        <span class="material-symbols-outlined">language</span>
+        johnsonyouth.org
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-wrap">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true">JYO</span>
+        <span>Johnson Youth Organization</span>
+      </a>
+      <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="mission.html">Mission</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Page Hero with background photo -->
+    <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1577896851231-70ef18881571?w=1400&h=500&fit=crop')">
+      <div class="container fade-in">
+        <div class="section-tag">
+          <span class="material-symbols-outlined" style="font-size:1rem">flag</span>
+          Our Purpose
+        </div>
+        <h1>Our Mission</h1>
+        <p class="section-subtitle">What drives everything we do for young people and families in our community.</p>
+      </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="container fade-in">
+      <div class="mission-box">
+        <p><strong>Johnson Youth Organization Inc exists to equip youth with mentorship, educational support, and leadership opportunities so they can thrive in school, family, and community life.</strong></p>
+        <p>We believe every young person deserves consistent encouragement, safe spaces, and access to adults who believe in their potential.</p>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="container fade-in">
+      <div class="section-tag">
+        <span class="material-symbols-outlined" style="font-size:1rem">visibility</span>
+        Looking Forward
+      </div>
+      <h2>Our Vision</h2>
+      <p style="max-width:800px;font-size:1.08rem;line-height:1.8">We envision a future where young people in Blythe and neighboring communities are empowered to lead with confidence, compassion, and purpose -- creating healthier families and stronger neighborhoods for generations to come.</p>
+    </section>
+
+    <!-- Core Values -->
+    <section class="container">
+      <div class="fade-in">
+        <div class="section-tag">
+          <span class="material-symbols-outlined" style="font-size:1rem">stars</span>
+          What We Stand For
+        </div>
+        <h2>Core Values</h2>
+      </div>
+      <div class="grid grid-3 fade-in">
+        <article class="value-card">
+          <div class="value-badge" aria-hidden="true">
+            <span class="material-symbols-outlined" style="font-size:1.6rem;color:var(--color-primary)">diversity_3</span>
+          </div>
+          <h3>Belonging</h3>
+          <p>Every student should feel seen, valued, and included.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-badge" aria-hidden="true">
+            <span class="material-symbols-outlined" style="font-size:1.6rem;color:var(--color-primary)">auto_stories</span>
+          </div>
+          <h3>Growth</h3>
+          <p>We cultivate learning, discipline, and curiosity every day.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-badge" aria-hidden="true">
+            <span class="material-symbols-outlined" style="font-size:1.6rem;color:var(--color-primary)">emoji_objects</span>
+          </div>
+          <h3>Leadership</h3>
+          <p>We develop character and confidence through service and responsibility.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Johnson Youth Organization Inc</h3>
+        <p>Building brighter futures for youth through mentorship, education, and community care.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="mission.html">Mission</a>
+          <a href="history.html">History</a>
+          <a href="projects.html">Projects</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <div class="socials">
+          <a class="social-icon" href="#" aria-label="Facebook">f</a>
+          <a class="social-icon" href="#" aria-label="Instagram">ig</a>
+          <a class="social-icon" href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">&copy; 2026 Johnson Youth Organization Inc. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.getElementById('navLinks');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
